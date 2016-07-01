@@ -1,0 +1,42 @@
+.dropdown {
+  position: relative;
+  * {
+    box-sizing: border-box;
+  }
+  button, ul {
+    font-size: 1.25em;
+    background-color: #FAFAFA;
+  }
+  button {
+    width: 250px;
+    border: 1px solid #BDBDBD;
+    outline: none;
+    padding: 8px;
+    margin: 0 0 8px 0;
+    text-align: left;
+    cursor: pointer;
+  }
+  ul {
+    display: none;
+    z-index: 1;
+    &.active {
+      display: block;
+    }
+    position: absolute;
+    min-width: 250px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid #BDBDBD;
+    li {
+      cursor: pointer;
+      padding: 8px;
+      &:not(:first-child) {
+        border-top: 1px solid #BDBDBD;
+      }
+      &.selected {
+        background-color: #C5E1A5;
+      }
+    }
+  }
+}
